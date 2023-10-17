@@ -1,3 +1,4 @@
+import json
 import logging
 
 import requests
@@ -18,7 +19,7 @@ from flet import (
 
 __author__ = 'Vladislav Gavryushenko'
 __copyright__ = f'DoubleV {__author__}'
-__version__ = '1.2'
+__version__ = '1.0'
 __email__ = 'gv@doublev.ru'
 __status__ = 'Beta'
 
@@ -27,7 +28,7 @@ _AppName_ = 'ElukalinLabels'
 
 
 
-update_url = 'https://github.com/akula993/elukalin2/blob/master/Elukalin/version.txt'
+update_url = 'https://github.com/akula993/elukalin_Lables/blob/master/version.txt'
 logger = logging.getLogger(__name__)
 c_handler = logging.FileHandler('log1.log')
 c_handler.setLevel(logging.WARNING)
@@ -35,6 +36,7 @@ c_handler.setLevel(logging.WARNING)
 c_handler.setFormatter(logging.Formatter('%(name)s - %(levelname)s - %(message)s'))
 
 logger.addHandler(c_handler)
+
 
 
 def main(page: ft.Page):
@@ -49,30 +51,21 @@ def main(page: ft.Page):
 
     page.update()
     # Менеджер обновления
-    def check_updates():
-        try:
-            # -- Online Version File
-            # -- Replace the url for your file online with the one below.
-            response = requests.get(update_url)
-            data = response.text
+    if requests.get(update_url):
+        response = requests.get(update_url)
+        file_info = response.text
+        # Извлечь версию
+        file_version = file_info["payload"]["blob"]["rawLines"][0]
 
-            if float(data) > float(__version__):
-                messagebox.showinfo('Software Update', 'Update Available!')
-                mb1 = messagebox.askyesno('Update!', f'{_AppName_} {__version__} needs to update to version {data}')
-                if mb1 is True:
-                    # -- Replace the url for your file online with the one below.
-                    webbrowser.open_new_tab('https://github.com/vsantiago113/Tkinter-MyTestApp/raw/master/'
-                                            'updates/MyTestApp.msi?raw=true')
-                    parent.destroy()
-                else:
-                    pass
-            else:
-                messagebox.showinfo('Software Update', 'No Updates are Available.')
-        except Exception as e:
-            messagebox.showinfo('Software Update', 'Unable to Check for Update, Error:' + str(e))
-    def install_update():
-        pass
-        # with requests.get(update_url+'updates/MyTestApp.msi?raw=true')
+        # Вывести версию
+        print("Версия файла:", file_version)
+        page.add(ft.Row(
+            [
+                ft.WindowDragArea(ft.Container(ft.Text("Необходимо обновить прогамму"),
+                                               bgcolor=ft.colors.RED, padding=10), expand=True),
+            ]
+        )
+    )
     # def start_update_manager():
     #             with requests.get('https://github.com/vsantiago113/Tkinter-MyTestApp/raw/master/'
     #                               'updates/MyTestApp.msi?raw=true', stream=True) as r:
