@@ -1,8 +1,6 @@
-import json
 import logging
 
 import requests
-import win32api
 from fpdf import FPDF
 import flet as ft
 from flet import (
@@ -15,8 +13,6 @@ from flet import (
     icons,
 )
 
-
-
 __author__ = 'Vladislav Gavryushenko'
 __copyright__ = f'DoubleV {__author__}'
 __version__ = '1.0'
@@ -24,9 +20,6 @@ __email__ = 'gv@doublev.ru'
 __status__ = 'Beta'
 
 _AppName_ = 'ElukalinLabels'
-
-
-
 
 update_url = 'https://raw.githubusercontent.com/akula993/elukalin_Lables/master/version.txt'
 logger = logging.getLogger(__name__)
@@ -38,9 +31,7 @@ c_handler.setFormatter(logging.Formatter('%(name)s - %(levelname)s - %(message)s
 logger.addHandler(c_handler)
 
 
-
 def main(page: ft.Page):
-
     page.title = 'Этикетка ELUKALIN'  # Название
     page.theme_mode = ft.ThemeMode.DARK
     page.padding = 50
@@ -53,26 +44,37 @@ def main(page: ft.Page):
     # Менеджер обновления
 
     response = requests.get(update_url)
-    data = float(response.text)
+    data = response.text
     if float(data) > float(__version__):
-        print(data)
-    if requests.get(update_url):
-        if response.status_code == 200:
-            file_contents = response.text
-            # Теперь file_contents содержит текстовое содержимое файла по URL-адресу
-            print(file_contents)
-        else:
-            print("Не удалось получить файл. Код ответа:", response.status_code)
+        def close_dlg(e):
+            dlg_modal.open = False
+            page.update()
 
+        dlg_modal = ft.AlertDialog(
+            modal=True,
+            title=ft.Text("Обновить программу?"),
+            actions=[
+                ft.TextButton("Обновить", on_click=close_dlg),
+                ft.TextButton("Отмена", on_click=close_dlg),
+            ],
+            actions_alignment=ft.MainAxisAlignment.END,
+            on_dismiss=lambda e: print("Modal dialog dismissed!"),
+        )
 
+        def open_dlg_modal(e):
+            page.dialog = dlg_modal
+            dlg_modal.open = True
+            page.update()
 
         page.add(ft.Row(
             [
-                ft.WindowDragArea(ft.Container(ft.Text("Необходимо обновить прогамму"),
-                                               bgcolor=ft.colors.RED, padding=10), expand=True),
+                ft.WindowDragArea(ft.Container(ft.ElevatedButton("Обновить",
+                                                                 bgcolor=ft.colors.RED, on_click=open_dlg_modal,
+                                                                 expand=True), ))
             ]
+        ),
+
         )
-    )
     # def start_update_manager():
     #             with requests.get('https://github.com/vsantiago113/Tkinter-MyTestApp/raw/master/'
     #                               'updates/MyTestApp.msi?raw=true', stream=True) as r:
@@ -169,11 +171,12 @@ def main(page: ft.Page):
             self.set_xy(205, 85)  # Устанавливаем текущую позицию (x=50, y=100)
             # self.image('ring.png', w=73, )
 
+
+
         def end_right(self):
             logger.warning('end_right')
-
             # Добавляем картинки справа на этикетке 1
-            self.add_font(fname='font/DejaVuSansCondensed.ttf')
+            self.add_font(fname='assets/font/DejaVuSansCondensed.ttf')
             self.set_font('DejaVuSansCondensed', size=9)
 
             self.set_xy(170, 160)  # Устанавливаем текущую позицию (x=50, y=100)

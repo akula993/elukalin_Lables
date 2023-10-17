@@ -1,9 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 
-block_cipher = None
-
-
 a = Analysis(
     ['main.py'],
     pathex=[],
@@ -14,12 +11,9 @@ a = Analysis(
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    win_no_prefer_redirects=False,
-    win_private_assemblies=False,
-    cipher=block_cipher,
     noarchive=False,
 )
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
@@ -37,13 +31,12 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    version='C:\\Users\\GAVRYU~1\\AppData\\Local\\Temp\\3bb7bc79-063c-4225-8a4a-5d99a7096156',
+    version='C:\\Users\\GAVRYU~1\\AppData\\Local\\Temp\\7ca435d7-9170-431e-b733-8e227d4dafc5',
     icon=['assets\\icon.png'],
 )
 coll = COLLECT(
     exe,
     a.binaries,
-    a.zipfiles,
     a.datas,
     strip=False,
     upx=True,
