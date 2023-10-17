@@ -28,7 +28,7 @@ _AppName_ = 'ElukalinLabels'
 
 
 
-update_url = 'https://github.com/akula993/elukalin_Lables/blob/master/version.txt'
+update_url = 'https://raw.githubusercontent.com/akula993/elukalin_Lables/master/version.txt'
 logger = logging.getLogger(__name__)
 c_handler = logging.FileHandler('log1.log')
 c_handler.setLevel(logging.WARNING)
@@ -51,14 +51,21 @@ def main(page: ft.Page):
 
     page.update()
     # Менеджер обновления
-    if requests.get(update_url):
-        response = requests.get(update_url)
-        file_info = response.text
-        # Извлечь версию
-        file_version = file_info["payload"]["blob"]["rawLines"][0]
 
-        # Вывести версию
-        print("Версия файла:", file_version)
+    response = requests.get(update_url)
+    data = float(response.text)
+    if float(data) > float(__version__):
+        print(data)
+    if requests.get(update_url):
+        if response.status_code == 200:
+            file_contents = response.text
+            # Теперь file_contents содержит текстовое содержимое файла по URL-адресу
+            print(file_contents)
+        else:
+            print("Не удалось получить файл. Код ответа:", response.status_code)
+
+
+
         page.add(ft.Row(
             [
                 ft.WindowDragArea(ft.Container(ft.Text("Необходимо обновить прогамму"),
