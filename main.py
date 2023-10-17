@@ -352,9 +352,8 @@ def main(page: ft.Page):
 
     def button_a4():
         # Создаем экземпляр класса PDF
-
         pdf = LableElukalinA4(orientation = 'L')  # Устанавливаем альбомную ориентацию (L - landscape)
-        pdf.add_font('DejaVu', '', 'DejaVuSansCondensed.ttf', uni = True)
+        pdf.add_font('DejaVu', '', f'{os.getcwd()}\DejaVuSansCondensed.ttf', uni = True)
         pdf.add_page()
         pdf.top_right()
         pdf.end_right()
@@ -366,6 +365,7 @@ def main(page: ft.Page):
         logger.info('button_a4!!!')
 
         page.update()
+
 
     def button_a5():
         # Создаем экземпляр класса PDF
