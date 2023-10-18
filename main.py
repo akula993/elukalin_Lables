@@ -48,7 +48,7 @@ def main(page: ft.Page):
             install = win32api.ShellExecute(0, 'open', f'tmp\\{__AppName__}.msi', None, None, 10)
             return install
         def start_update_manager():
-            pass
+            with requests.get()
 
         def update_dlg(e):
             pass

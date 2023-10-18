@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="21.1" version="21.1" PreviousModules="simple" Modules="enterprise" RootPath="." Language="ru" Id="{DC2DE141-2DB7-4044-895E-372CD711B0B0}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="ActSyncAppComponent;CPLAppletComponent;AutorunComponent;GameUxComponent;SilverlightSlnComponent;SharePointSlnComponent;AppXAppDetailsComponent;FixupComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_APP_FILE" Value="[#elukalin.exe]"/>
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1" MultiBuildValue="DefaultBuild:"/>
+    <ROW Property="ARPCOMMENTS" Value="Эта база данных установщика содержит логику и данные, необходимые для установки [|[ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="elukalin.exe" Type="8"/>
+    <ROW Property="AiSkipExitDlg" Value="1"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="Manufacturer" Value="DoubleV"/>
+    <ROW Property="ProductCode" Value="1049:{D2F606FB-41CD-4715-B4E2-0FD0EBDC95AE} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1049"/>
+    <ROW Property="ProductName" Value="ElukalinLabels"/>
+    <ROW Property="ProductVersion" Value="1.1" Options="32"/>
+    <ROW Property="REBOOT" MultiBuildValue="DefaultBuild:ReallySuppress"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{0CD78D45-EEA0-4C50-A1A5-4332F0776567}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="DoubleV_Dir" Directory_Parent="ProgramMenuFolder" DefaultDir="DoubleV"/>
+    <ROW Directory="PIL_Dir" Directory_Parent="elukalin_Dir" DefaultDir="PIL"/>
+    <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="assets_Dir" Directory_Parent="elukalin_Dir" DefaultDir="assets"/>
+    <ROW Directory="bin_Dir" Directory_Parent="flet_Dir" DefaultDir="bin"/>
+    <ROW Directory="certifi_Dir" Directory_Parent="elukalin_Dir" DefaultDir="certifi"/>
+    <ROW Directory="charset_normalizer_Dir" Directory_Parent="elukalin_Dir" DefaultDir="CHARSE~1|charset_normalizer"/>
+    <ROW Directory="data_Dir" Directory_Parent="flet_1_Dir" DefaultDir="data"/>
+    <ROW Directory="elukalin_Dir" Directory_Parent="APPDIR" DefaultDir="elukalin"/>
+    <ROW Directory="flet_1_Dir" Directory_Parent="bin_Dir" DefaultDir="flet"/>
+    <ROW Directory="flet_Dir" Directory_Parent="elukalin_Dir" DefaultDir="flet"/>
+    <ROW Directory="flutter_assets_Dir" Directory_Parent="data_Dir" DefaultDir="FLUTTE~1|flutter_assets"/>
+    <ROW Directory="fonts_Dir" Directory_Parent="flutter_assets_Dir" DefaultDir="fonts"/>
+    <ROW Directory="images_1_Dir" Directory_Parent="window_manager_Dir" DefaultDir="images"/>
+    <ROW Directory="images_Dir" Directory_Parent="assets_Dir" DefaultDir="images"/>
+    <ROW Directory="packages_Dir" Directory_Parent="flutter_assets_Dir" DefaultDir="packages"/>
+    <ROW Directory="pywin32_system32_Dir" Directory_Parent="elukalin_Dir" DefaultDir="PYWIN3~1|pywin32_system32"/>
+    <ROW Directory="shaders_Dir" Directory_Parent="flutter_assets_Dir" DefaultDir="shaders"/>
+    <ROW Directory="websockets11.0.3.distinfo_Dir" Directory_Parent="elukalin_Dir" DefaultDir="WEBSOC~1.DIS|websockets-11.0.3.dist-info"/>
+    <ROW Directory="websockets_Dir" Directory_Parent="elukalin_Dir" DefaultDir="WEBSOC~1|websockets"/>
+    <ROW Directory="win32_Dir" Directory_Parent="elukalin_Dir" DefaultDir="win32"/>
+    <ROW Directory="window_manager_Dir" Directory_Parent="packages_Dir" DefaultDir="WINDOW~1|window_manager"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{449101BA-FE63-4A0E-AF0D-3BA150842303}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="AssetManifest.bin" ComponentId="{BB0C935E-61A1-4896-AF83-69B505FD8006}" Directory_="flutter_assets_Dir" Attributes="0" KeyPath="AssetManifest.bin" Type="0"/>
+    <ROW Component="DoubleV" ComponentId="{85AFE45C-2881-4E0B-9D0D-14D751314E80}" Directory_="DoubleV_Dir" Attributes="0"/>
+    <ROW Component="DoubleV.jpg" ComponentId="{2BB60ADC-F4EA-465A-8D5E-EAE977AA5801}" Directory_="images_Dir" Attributes="0" KeyPath="DoubleV.jpg" Type="0"/>
+    <ROW Component="INSTALLER" ComponentId="{AB160424-941C-461E-9653-F815AE1BC579}" Directory_="websockets11.0.3.distinfo_Dir" Attributes="0" KeyPath="INSTALLER" Type="0"/>
+    <ROW Component="MaterialIconsRegular.otf" ComponentId="{831EA942-9AE8-4A11-ACC0-07E5A3A3A024}" Directory_="fonts_Dir" Attributes="0" KeyPath="MaterialIconsRegular.otf" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{E51B1409-F2FA-492F-A91F-95FC47096AB5}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="VCRUNTIME140.dll" ComponentId="{04E28EC4-5338-4A1F-AD2A-54E6C85DCB28}" Directory_="elukalin_Dir" Attributes="256" KeyPath="VCRUNTIME140.dll_1"/>
+    <ROW Component="VCRUNTIME140_1.dll" ComponentId="{E9E00B02-4F91-4480-ACB1-D5DFB62AEE1C}" Directory_="elukalin_Dir" Attributes="256" KeyPath="VCRUNTIME140_1.dll_1"/>
+    <ROW Component="_imaging.cp311win_amd64.pyd" ComponentId="{42F2F7C9-F78B-434D-9A62-47865B08C35E}" Directory_="PIL_Dir" Attributes="256" KeyPath="_imaging.cp311win_amd64.pyd" Type="0"/>
+    <ROW Component="app.so" ComponentId="{CA7AA8E1-BCB2-4AA8-A86B-9B5533602424}" Directory_="data_Dir" Attributes="0" KeyPath="app.so" Type="0"/>
+    <ROW Component="audioplayers_windows_plugin.dll" ComponentId="{3428E537-F45A-449C-8D70-8AD7EAD0DE77}" Directory_="flet_1_Dir" Attributes="256" KeyPath="audioplayers_windows_plugin.dll"/>
+    <ROW Component="base_library.zip" ComponentId="{790B43DF-414A-458C-A78C-8DAF87D2C75F}" Directory_="elukalin_Dir" Attributes="0" KeyPath="base_library.zip" Type="0"/>
+    <ROW Component="cacert.pem" ComponentId="{57650390-7E61-4BEB-AC7D-EE32C7743C2B}" Directory_="certifi_Dir" Attributes="0" KeyPath="cacert.pem" Type="0"/>
+    <ROW Component="elukalin.exe" ComponentId="{9B09F005-6A38-41BB-AC61-345B98DC5150}" Directory_="elukalin_Dir" Attributes="256" KeyPath="elukalin.exe"/>
+    <ROW Component="flet.exe" ComponentId="{0F32D383-3768-49C5-8574-845F7B3F76F5}" Directory_="flet_1_Dir" Attributes="256" KeyPath="flet.exe"/>
+    <ROW Component="flutter_windows.dll" ComponentId="{C101FF64-58E0-408C-9016-A69E78EC4D8F}" Directory_="flet_1_Dir" Attributes="256" KeyPath="flutter_windows.dll"/>
+    <ROW Component="ic_chrome_close.png" ComponentId="{F30CA1C7-6B7A-497F-9FFB-F22D04016D2E}" Directory_="images_1_Dir" Attributes="0" KeyPath="ic_chrome_close.png" Type="0"/>
+    <ROW Component="ink_sparkle.frag" ComponentId="{8E883F60-3850-4835-B461-1665AA6F0683}" Directory_="shaders_Dir" Attributes="0" KeyPath="ink_sparkle.frag" Type="0"/>
+    <ROW Component="libcrypto1_1.dll" ComponentId="{C78114FE-AC91-4725-BC04-170D7A5D22EF}" Directory_="elukalin_Dir" Attributes="256" KeyPath="libcrypto1_1.dll"/>
+    <ROW Component="libffi8.dll" ComponentId="{88FB8D4A-721E-4419-9DB7-CF92E82C479F}" Directory_="elukalin_Dir" Attributes="256" KeyPath="libffi8.dll"/>
+    <ROW Component="libssl1_1.dll" ComponentId="{28DBAB74-7C9B-4F7B-B90C-C591621283C7}" Directory_="elukalin_Dir" Attributes="256" KeyPath="libssl1_1.dll"/>
+    <ROW Component="md.cp311win_amd64.pyd" ComponentId="{09244205-4803-4CA4-9464-8B57B5E6911D}" Directory_="charset_normalizer_Dir" Attributes="256" KeyPath="md.cp311win_amd64.pyd" Type="0"/>
+    <ROW Component="msvcp140.dll" ComponentId="{9214DA64-6B04-4B22-B3C7-B2B31A41ABFE}" Directory_="flet_1_Dir" Attributes="256" KeyPath="msvcp140.dll"/>
+    <ROW Component="python311.dll" ComponentId="{C99D6B1D-4EBB-4320-AE44-66383DDDFBC0}" Directory_="elukalin_Dir" Attributes="256" KeyPath="python311.dll"/>
+    <ROW Component="pywintypes311.dll" ComponentId="{FBAADBD8-3F87-4161-B615-AB3E79CDD546}" Directory_="pywin32_system32_Dir" Attributes="256" KeyPath="pywintypes311.dll"/>
+    <ROW Component="screen_retriever_plugin.dll" ComponentId="{459360A7-5DDB-4445-B853-4930848C06BA}" Directory_="flet_1_Dir" Attributes="256" KeyPath="screen_retriever_plugin.dll"/>
+    <ROW Component="speedups.cp311win_amd64.pyd" ComponentId="{53069392-18EE-4AD9-812D-90946F5531F5}" Directory_="websockets_Dir" Attributes="256" KeyPath="speedups.cp311win_amd64.pyd" Type="0"/>
+    <ROW Component="url_launcher_windows_plugin.dll" ComponentId="{755F8FF3-B80C-4C1C-9E5B-23A54DB949A0}" Directory_="flet_1_Dir" Attributes="256" KeyPath="url_launcher_windows_plugin.dll"/>
+    <ROW Component="vcruntime140.dll" ComponentId="{BE28228B-B046-4326-852F-CADE0788A5DE}" Directory_="flet_1_Dir" Attributes="256" KeyPath="vcruntime140.dll"/>
+    <ROW Component="vcruntime140_1.dll" ComponentId="{E685AA87-A8A6-4048-B7E7-F493EBD5DBE7}" Directory_="flet_1_Dir" Attributes="256" KeyPath="vcruntime140_1.dll"/>
+    <ROW Component="win32api.pyd" ComponentId="{8471968E-3259-4A40-B09D-07544F9F3315}" Directory_="win32_Dir" Attributes="256" KeyPath="win32api.pyd" Type="0"/>
+    <ROW Component="window_manager_plugin.dll" ComponentId="{5C128604-5694-4BF8-9DDA-D8D8274D40AE}" Directory_="flet_1_Dir" Attributes="256" KeyPath="window_manager_plugin.dll"/>
+    <ROW Component="window_to_front_plugin.dll" ComponentId="{A3DDA16B-4745-438E-9EB1-867C4DC76466}" Directory_="flet_1_Dir" Attributes="256" KeyPath="window_to_front_plugin.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="DoubleV.jpg" Component_="DoubleV.jpg" FileName="DoubleV.jpg" Attributes="0" SourcePath="setup\ols\elukalin\assets\images\DoubleV.jpg" SelfReg="false"/>
+    <ROW File="Logo_EUKALIN.jpg" Component_="DoubleV.jpg" FileName="LOGO_E~1.JPG|Logo_EUKALIN.jpg" Attributes="0" SourcePath="setup\ols\elukalin\assets\images\Logo_EUKALIN.jpg" SelfReg="false"/>
+    <ROW File="ring.png" Component_="DoubleV.jpg" FileName="ring.png" Attributes="0" SourcePath="setup\ols\elukalin\assets\images\ring.png" SelfReg="false"/>
+    <ROW File="base_library.zip" Component_="base_library.zip" FileName="BASE_L~1.ZIP|base_library.zip" Attributes="0" SourcePath="setup\ols\elukalin\base_library.zip" SelfReg="false"/>
+    <ROW File="cacert.pem" Component_="cacert.pem" FileName="cacert.pem" Attributes="0" SourcePath="setup\ols\elukalin\certifi\cacert.pem" SelfReg="false"/>
+    <ROW File="py.typed" Component_="cacert.pem" FileName="PY~1.TYP|py.typed" Attributes="0" SourcePath="setup\ols\elukalin\certifi\py.typed" SelfReg="false"/>
+    <ROW File="md.cp311win_amd64.pyd" Component_="md.cp311win_amd64.pyd" FileName="MDCP31~1.PYD|md.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\charset_normalizer\md.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="md__mypyc.cp311win_amd64.pyd" Component_="md.cp311win_amd64.pyd" FileName="MD__MY~1.PYD|md__mypyc.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\charset_normalizer\md__mypyc.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="DejaVuSansCondensed.ttf" Component_="base_library.zip" FileName="DEJAVU~1.TTF|DejaVuSansCondensed.ttf" Attributes="0" SourcePath="setup\ols\elukalin\DejaVuSansCondensed.ttf" SelfReg="false"/>
+    <ROW File="elukalin.exe" Component_="elukalin.exe" FileName="elukalin.exe" Attributes="0" SourcePath="setup\ols\elukalin\elukalin.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="audioplayers_windows_plugin.dll" Component_="audioplayers_windows_plugin.dll" FileName="AUDIOP~1.DLL|audioplayers_windows_plugin.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\audioplayers_windows_plugin.dll" SelfReg="false"/>
+    <ROW File="app.so" Component_="app.so" FileName="app.so" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\app.so" SelfReg="false"/>
+    <ROW File="AssetManifest.bin" Component_="AssetManifest.bin" FileName="ASSETM~1.BIN|AssetManifest.bin" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\AssetManifest.bin" SelfReg="false"/>
+    <ROW File="AssetManifest.json" Component_="AssetManifest.bin" FileName="ASSETM~1.JSO|AssetManifest.json" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\AssetManifest.json" SelfReg="false"/>
+    <ROW File="FontManifest.json" Component_="AssetManifest.bin" FileName="FONTMA~1.JSO|FontManifest.json" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\FontManifest.json" SelfReg="false"/>
+    <ROW File="MaterialIconsRegular.otf" Component_="MaterialIconsRegular.otf" FileName="MATERI~1.OTF|MaterialIcons-Regular.otf" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\fonts\MaterialIcons-Regular.otf" SelfReg="false"/>
+    <ROW File="NOTICES.Z" Component_="AssetManifest.bin" FileName="NOTICES.Z" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\NOTICES.Z" SelfReg="false"/>
+    <ROW File="ic_chrome_close.png" Component_="ic_chrome_close.png" FileName="IC_CHR~1.PNG|ic_chrome_close.png" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\packages\window_manager\images\ic_chrome_close.png" SelfReg="false"/>
+    <ROW File="ic_chrome_maximize.png" Component_="ic_chrome_close.png" FileName="IC_CHR~2.PNG|ic_chrome_maximize.png" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\packages\window_manager\images\ic_chrome_maximize.png" SelfReg="false"/>
+    <ROW File="ic_chrome_minimize.png" Component_="ic_chrome_close.png" FileName="IC_CHR~3.PNG|ic_chrome_minimize.png" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\packages\window_manager\images\ic_chrome_minimize.png" SelfReg="false"/>
+    <ROW File="ic_chrome_unmaximize.png" Component_="ic_chrome_close.png" FileName="IC_CHR~4.PNG|ic_chrome_unmaximize.png" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\packages\window_manager\images\ic_chrome_unmaximize.png" SelfReg="false"/>
+    <ROW File="ink_sparkle.frag" Component_="ink_sparkle.frag" FileName="INK_SP~1.FRA|ink_sparkle.frag" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\flutter_assets\shaders\ink_sparkle.frag" SelfReg="false"/>
+    <ROW File="icudtl.dat" Component_="app.so" FileName="icudtl.dat" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\data\icudtl.dat" SelfReg="false"/>
+    <ROW File="flet.exe" Component_="flet.exe" FileName="flet.exe" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\flet.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="flutter_windows.dll" Component_="flutter_windows.dll" FileName="FLUTTE~1.DLL|flutter_windows.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\flutter_windows.dll" SelfReg="false"/>
+    <ROW File="msvcp140.dll" Component_="msvcp140.dll" FileName="msvcp140.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\msvcp140.dll" SelfReg="false"/>
+    <ROW File="screen_retriever_plugin.dll" Component_="screen_retriever_plugin.dll" FileName="SCREEN~1.DLL|screen_retriever_plugin.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\screen_retriever_plugin.dll" SelfReg="false"/>
+    <ROW File="url_launcher_windows_plugin.dll" Component_="url_launcher_windows_plugin.dll" FileName="URL_LA~1.DLL|url_launcher_windows_plugin.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\url_launcher_windows_plugin.dll" SelfReg="false"/>
+    <ROW File="vcruntime140.dll" Component_="vcruntime140.dll" FileName="VCRUNT~1.DLL|vcruntime140.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\vcruntime140.dll" SelfReg="false"/>
+    <ROW File="vcruntime140_1.dll" Component_="vcruntime140_1.dll" FileName="VCRUNT~2.DLL|vcruntime140_1.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\vcruntime140_1.dll" SelfReg="false"/>
+    <ROW File="window_manager_plugin.dll" Component_="window_manager_plugin.dll" FileName="WINDOW~1.DLL|window_manager_plugin.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\window_manager_plugin.dll" SelfReg="false"/>
+    <ROW File="window_to_front_plugin.dll" Component_="window_to_front_plugin.dll" FileName="WINDOW~2.DLL|window_to_front_plugin.dll" Attributes="0" SourcePath="setup\ols\elukalin\flet\bin\flet\window_to_front_plugin.dll" SelfReg="false"/>
+    <ROW File="libcrypto1_1.dll" Component_="libcrypto1_1.dll" FileName="LIBCRY~1.DLL|libcrypto-1_1.dll" Attributes="0" SourcePath="setup\ols\elukalin\libcrypto-1_1.dll" SelfReg="false"/>
+    <ROW File="libffi8.dll" Component_="libffi8.dll" FileName="libffi-8.dll" Attributes="0" SourcePath="setup\ols\elukalin\libffi-8.dll" SelfReg="false"/>
+    <ROW File="libssl1_1.dll" Component_="libssl1_1.dll" FileName="LIBSSL~1.DLL|libssl-1_1.dll" Attributes="0" SourcePath="setup\ols\elukalin\libssl-1_1.dll" SelfReg="false"/>
+    <ROW File="_imaging.cp311win_amd64.pyd" Component_="_imaging.cp311win_amd64.pyd" FileName="_IMAGI~1.PYD|_imaging.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\PIL\_imaging.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="_imagingcms.cp311win_amd64.pyd" Component_="_imaging.cp311win_amd64.pyd" FileName="_IMAGI~2.PYD|_imagingcms.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\PIL\_imagingcms.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="_imagingft.cp311win_amd64.pyd" Component_="_imaging.cp311win_amd64.pyd" FileName="_IMAGI~3.PYD|_imagingft.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\PIL\_imagingft.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="_imagingtk.cp311win_amd64.pyd" Component_="_imaging.cp311win_amd64.pyd" FileName="_IMAGI~4.PYD|_imagingtk.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\PIL\_imagingtk.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="_webp.cp311win_amd64.pyd" Component_="_imaging.cp311win_amd64.pyd" FileName="_WEBPC~1.PYD|_webp.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\PIL\_webp.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="pyexpat.pyd" Component_="base_library.zip" FileName="pyexpat.pyd" Attributes="0" SourcePath="setup\ols\elukalin\pyexpat.pyd" SelfReg="false"/>
+    <ROW File="python311.dll" Component_="python311.dll" FileName="PYTHON~1.DLL|python311.dll" Attributes="0" SourcePath="setup\ols\elukalin\python311.dll" SelfReg="false"/>
+    <ROW File="pywintypes311.dll" Component_="pywintypes311.dll" FileName="PYWINT~1.DLL|pywintypes311.dll" Attributes="0" SourcePath="setup\ols\elukalin\pywin32_system32\pywintypes311.dll" SelfReg="false"/>
+    <ROW File="select.pyd" Component_="base_library.zip" FileName="select.pyd" Attributes="0" SourcePath="setup\ols\elukalin\select.pyd" SelfReg="false"/>
+    <ROW File="unicodedata.pyd" Component_="base_library.zip" FileName="UNICOD~1.PYD|unicodedata.pyd" Attributes="0" SourcePath="setup\ols\elukalin\unicodedata.pyd" SelfReg="false"/>
+    <ROW File="VCRUNTIME140.dll_1" Component_="VCRUNTIME140.dll" FileName="VCRUNT~1.DLL|VCRUNTIME140.dll" Attributes="0" SourcePath="setup\ols\elukalin\VCRUNTIME140.dll" SelfReg="false"/>
+    <ROW File="VCRUNTIME140_1.dll_1" Component_="VCRUNTIME140_1.dll" FileName="VCRUNT~2.DLL|VCRUNTIME140_1.dll" Attributes="0" SourcePath="setup\ols\elukalin\VCRUNTIME140_1.dll" SelfReg="false"/>
+    <ROW File="speedups.cp311win_amd64.pyd" Component_="speedups.cp311win_amd64.pyd" FileName="SPEEDU~1.PYD|speedups.cp311-win_amd64.pyd" Attributes="0" SourcePath="setup\ols\elukalin\websockets\speedups.cp311-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="INSTALLER" Component_="INSTALLER" FileName="INSTAL~1|INSTALLER" Attributes="0" SourcePath="setup\ols\elukalin\websockets-11.0.3.dist-info\INSTALLER" SelfReg="false"/>
+    <ROW File="LICENSE" Component_="INSTALLER" FileName="LICENSE" Attributes="0" SourcePath="setup\ols\elukalin\websockets-11.0.3.dist-info\LICENSE" SelfReg="false"/>
+    <ROW File="METADATA" Component_="INSTALLER" FileName="METADATA" Attributes="0" SourcePath="setup\ols\elukalin\websockets-11.0.3.dist-info\METADATA" SelfReg="false"/>
+    <ROW File="RECORD" Component_="INSTALLER" FileName="RECORD" Attributes="0" SourcePath="setup\ols\elukalin\websockets-11.0.3.dist-info\RECORD" SelfReg="false"/>
+    <ROW File="top_level.txt" Component_="INSTALLER" FileName="TOP_LE~1.TXT|top_level.txt" Attributes="0" SourcePath="setup\ols\elukalin\websockets-11.0.3.dist-info\top_level.txt" SelfReg="false"/>
+    <ROW File="WHEEL" Component_="INSTALLER" FileName="WHEEL" Attributes="0" SourcePath="setup\ols\elukalin\websockets-11.0.3.dist-info\WHEEL" SelfReg="false"/>
+    <ROW File="win32api.pyd" Component_="win32api.pyd" FileName="win32api.pyd" Attributes="0" SourcePath="setup\ols\elukalin\win32\win32api.pyd" SelfReg="false"/>
+    <ROW File="_asyncio.pyd" Component_="base_library.zip" FileName="_asyncio.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_asyncio.pyd" SelfReg="false"/>
+    <ROW File="_bz2.pyd" Component_="base_library.zip" FileName="_bz2.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_bz2.pyd" SelfReg="false"/>
+    <ROW File="_ctypes.pyd" Component_="base_library.zip" FileName="_ctypes.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_ctypes.pyd" SelfReg="false"/>
+    <ROW File="_decimal.pyd" Component_="base_library.zip" FileName="_decimal.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_decimal.pyd" SelfReg="false"/>
+    <ROW File="_hashlib.pyd" Component_="base_library.zip" FileName="_hashlib.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_hashlib.pyd" SelfReg="false"/>
+    <ROW File="_lzma.pyd" Component_="base_library.zip" FileName="_lzma.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_lzma.pyd" SelfReg="false"/>
+    <ROW File="_multiprocessing.pyd" Component_="base_library.zip" FileName="_MULTI~1.PYD|_multiprocessing.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_multiprocessing.pyd" SelfReg="false"/>
+    <ROW File="_overlapped.pyd" Component_="base_library.zip" FileName="_OVERL~1.PYD|_overlapped.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_overlapped.pyd" SelfReg="false"/>
+    <ROW File="_queue.pyd" Component_="base_library.zip" FileName="_queue.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_queue.pyd" SelfReg="false"/>
+    <ROW File="_socket.pyd" Component_="base_library.zip" FileName="_socket.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_socket.pyd" SelfReg="false"/>
+    <ROW File="_ssl.pyd" Component_="base_library.zip" FileName="_ssl.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_ssl.pyd" SelfReg="false"/>
+    <ROW File="_uuid.pyd" Component_="base_library.zip" FileName="_uuid.pyd" Attributes="0" SourcePath="setup\ols\elukalin\_uuid.pyd" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="updates" Languages="ru" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_ru.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="DoubleV_Dir" Component_="DoubleV" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_FinishActions" Type="1" Source="aicustact.dll" Target="RunAllExitActions"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="LaunchApp"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[AppDataFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="DoubleV.jpg"/>
+    <ROW Feature_="MainFeature" Component_="base_library.zip"/>
+    <ROW Feature_="MainFeature" Component_="cacert.pem"/>
+    <ROW Feature_="MainFeature" Component_="md.cp311win_amd64.pyd"/>
+    <ROW Feature_="MainFeature" Component_="elukalin.exe"/>
+    <ROW Feature_="MainFeature" Component_="audioplayers_windows_plugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="app.so"/>
+    <ROW Feature_="MainFeature" Component_="AssetManifest.bin"/>
+    <ROW Feature_="MainFeature" Component_="MaterialIconsRegular.otf"/>
+    <ROW Feature_="MainFeature" Component_="ic_chrome_close.png"/>
+    <ROW Feature_="MainFeature" Component_="ink_sparkle.frag"/>
+    <ROW Feature_="MainFeature" Component_="flet.exe"/>
+    <ROW Feature_="MainFeature" Component_="flutter_windows.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcp140.dll"/>
+    <ROW Feature_="MainFeature" Component_="screen_retriever_plugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="url_launcher_windows_plugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="vcruntime140.dll"/>
+    <ROW Feature_="MainFeature" Component_="vcruntime140_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="window_manager_plugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="window_to_front_plugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="libcrypto1_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="libffi8.dll"/>
+    <ROW Feature_="MainFeature" Component_="libssl1_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="_imaging.cp311win_amd64.pyd"/>
+    <ROW Feature_="MainFeature" Component_="python311.dll"/>
+    <ROW Feature_="MainFeature" Component_="pywintypes311.dll"/>
+    <ROW Feature_="MainFeature" Component_="VCRUNTIME140.dll"/>
+    <ROW Feature_="MainFeature" Component_="VCRUNTIME140_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="speedups.cp311win_amd64.pyd"/>
+    <ROW Feature_="MainFeature" Component_="INSTALLER"/>
+    <ROW Feature_="MainFeature" Component_="win32api.pyd"/>
+    <ROW Feature_="MainFeature" Component_="DoubleV"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+    <ROW Name="elukalin.exe" SourcePath="setup\elukalin\elukalin.exe" Index="0"/>
+    <ROW Name="elukalin_1.exe" SourcePath="assets\icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_FinishActions" Condition="AI_INSTALL AND AiSkipExitDlg" Sequence="1301"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="Нельзя установить [ProductName] на [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="Нельзя установить [ProductName] на [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="Нельзя установить [ProductName] на [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] не может быть установлен на [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="ProductNameProductVersion" Directory_="DoubleV_Dir" Name="УДАЛИТ~1.1|Удалить [|ProductName] [|ProductVersion]" Component_="win32api.pyd" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="elukalin" Directory_="StartMenuFolder" Name="elukalin" Component_="elukalin.exe" Target="[#elukalin.exe]" Hotkey="0" Icon_="elukalin.exe" IconIndex="0" ShowCmd="1" WkDir="elukalin_Dir"/>
+    <ROW Shortcut="elukalin_1" Directory_="DoubleV_Dir" Name="elukalin" Component_="elukalin.exe" Target="[#elukalin.exe]" Hotkey="0" Icon_="elukalin_1.exe" IconIndex="0" ShowCmd="1" WkDir="elukalin_Dir"/>
+    <ROW Shortcut="elukalin_2" Directory_="DesktopFolder" Name="elukalin" Component_="elukalin.exe" Target="[#elukalin.exe]" Hotkey="0" Icon_="elukalin_1.exe" IconIndex="0" ShowCmd="1" WkDir="elukalin_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
